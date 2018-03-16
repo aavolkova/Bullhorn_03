@@ -1,11 +1,17 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8"/>
-    <title>Title</title>
-</head>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="base :: headstuff"></head>
+
 <body>
-<h3>Message Details:</h3>
+
+
+<nav th:replace="base :: navbar"></nav>
+<div class="container">
+    <div class="jumbotron">
+
+
+
+<h1>Message Details:</h1>
 
 Content :<span th:text="${message.content}" ></span> <br /><br />
 
@@ -16,5 +22,15 @@ Sent By :<span th:text="${message.sentby}" ></span> <br /><br />
 
 <br /><a href="/">List of All Messages</a><br />
 <br /><a href="/add">Add a new Message</a><br />
+
+
+
+    </div>
+</div>
+
+
+<nav th:replace="base :: footer"></nav>
+<th:block th:replace="base :: jslinks"></th:block>
+
 </body>
 </html>
